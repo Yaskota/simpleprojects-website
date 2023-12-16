@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.outer {
+            border-radius: 10%;
+            height:300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:space-between;
+            box-shadow: 2px 2px 30px 3px;
+        }
+        div.buttons {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            margin:20px;
+        }
+        div.counter {
+            height: 200px;
+            box-shadow: 2px 2px 15px 1px;
+            width: 200px;
+            margin:20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(200, 255, 0);
+            border-radius: 5px;
+            font-size: 100px;
+        }
+        button {
+            height:70px;
+            width:70px;
+            font-size: 30px;
+            border-radius: 20%;
+            background-color: rgb(120, 113, 250);
+
+        }
+        button:hover {
+            background-color:rgb(51, 51, 234);
+        }
+        p {
+            margin:10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="counter"></div>
+        <div class="buttons">
+        <button title="Press to increase the number." onclick="
+            count++;
+            document.querySelector('.counter').innerHTML=`${count}`;
+            ">+</button>
+        <p>COUNTER</p>
+        <button title="press to decrease the number." onclick="
+        count--;
+        document.querySelector('.counter').innerHTML=`${count}`;
+        ">-</button>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        document.querySelector('.counter').innerHTML=`${count}`;
+    </script>
+</body>
+</html>

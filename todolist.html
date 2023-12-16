@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .remove {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+        .outer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-right: 2px;
+            height: 20px;
+            padding: 2px;
+        }
+
+        button {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 27px;
+            width: 100px;
+        }
+        .main {
+            display: flex;
+            flex-direction: row;
+        }
+        .adds {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin:10px;
+        }
+        .for {
+            width:160px;
+            margin:0px;
+        }
+        .removebutton {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="main">
+            <input type="text">
+            <div clas s="add">
+                <button class="add" onclick="
+                let elementvalue = document.querySelector('input').value;
+                console.log(elementvalue);
+                if(elementvalue === '') {
+                    alert('empty not valid');
+                }
+                else {
+                    add(elementvalue);
+                }
+                document.querySelector('input').value = '';
+                ">ADD ITEM</button>
+            </div>
+        </div>
+        <div class="remove"></div>
+    </div>
+    <script>
+        let tre = '';
+        let coun=0
+        function add(value) {
+            coun++;
+            html = `<div class="${coun}"><div class="adds"> <p class="for">${value}</p> <button class="removebutton" onclick="
+                    
+                ">remove</button></div></div>`;
+            tre = tre + html;
+            document.querySelector('.remove').innerHTML = `${tre}`;
+        }
+    </script>
+</body>
+
+</html>

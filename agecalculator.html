@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        body {
+            height: 800px;
+            background-color: rgb(87, 87, 241);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 500px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            background-color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            border-bottom: 1px solid;
+            height: 40px;
+        }
+
+        .matter {
+            display: flex;
+            background-color: rgb(216, 245, 244);
+            justify-content: space-evenly;
+            height: 100%;
+            padding-top: 30px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        input {
+            width: 100px;
+            margin-right: 10px;
+            height: 25px;
+        }
+
+        button {
+            position: absolute;
+
+        }
+
+        .submit {
+            position: absolute;
+            top: 456px;
+            left: 690px;
+        }
+
+        button {
+            height: 40px;
+            width: 150px;
+            background-color: rgb(58, 58, 255);
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+            <p>Age Calculator</p>
+        </div>
+        <div class="matter">
+            <div class="date">
+                <p>Date</p>
+                <input type="text" placeholder="DD" class="DATE">
+            </div>
+            <div class="month">
+                <p>Month</p>
+                <input type="text" placeholder="MM" class="MONTH">
+            </div>
+            <div class="year">
+                <p>Year</p>
+                <input type="text" placeholder="YYYY" class="YEAR">
+            </div>
+            <div class="submit">
+                <button onclick="
+                    let gDate = document.querySelector('.DATE').value;
+                    let gMonth = document.querySelector('.MONTH').value;
+                    let gYear = document.querySelector('.YEAR').value;
+                    console.log(gDate,gMonth,gYear);
+                    console.log(year,month,date);
+                    if(gMonth < month){
+                         ayear = year - gYear;
+                        if(gDate > date){
+                             amonth = month - gMonth - 1;
+                             adate = 31-(gDate -date);  
+                        }
+                        else if(gDate < date){
+                             amonth = month - gMonth;
+                             adate = date - gDate;
+                        }
+                        else{
+                             amonth = month - gMonth;
+                             adate = 0;
+                        }
+
+                    }
+                    else if(gMonth > month){
+                         ayear = (year-1) -gYear;
+                        if(gDate > date){
+                             amonth = 11-(gMonth - month);
+                             adate = 31-(gDate -date);  
+                        }
+                        else if(gDate < date){
+                             amonth = 12-(gMonth - month);
+                             adate = date - gDate;
+                        }
+                        else{
+                             amonth = 12-(gMonth - month);
+                             adate = 0;
+                        }
+                    }
+                    else if(gMonth == month){
+                        if(gDate < date){
+                             ayear=year-gYear;
+                             adate=date-gDate;
+                             amonth=0;
+                        }
+                        else if(gDate > date){
+                             ayear=year-gYear-1;
+                             amonth=11;
+                             adate=30-(gDate-date);
+                        }
+                        else{
+                             ayear=year-gYear;
+                             amonth=0;
+                             adate=0;
+                        }
+                    }
+                    
+                    console.log(ayear,amonth,adate);
+                    "><b>Submit</b></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var current = new Date();
+        var year = current.getFullYear();
+        var month = current.getMonth() + 1;
+        var date = current.getDate();
+        let ayear=0;
+        let adate=0;
+        let amonth=0;
+    </script>
+</body>
+
+</html>

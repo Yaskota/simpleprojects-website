@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react symbol</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+        }
+        .one1,.one2,.one3 {
+            height: 40px;
+            width: 200px;
+            border: 5px solid rgb(0, 0, 0);
+            box-shadow: 0px 0px 20px rgb(143, 143, 191);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .one1 {
+            transform: rotate(120deg);
+            animation: rotate1 4s ease 0s infinite alternate-reverse ;
+        }
+        .one2 {
+            transform: rotate(240deg);
+            animation: rotate2 4s ease 0s infinite alternate-reverse ;
+        }
+        .one3 {
+            
+            animation: rotate3 4s ease 0s infinite alternate-reverse ;
+        }
+        @keyframes rotate1 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes rotate2 {
+            0% {
+                transform: rotate(120deg);
+            }
+            100% {
+                transform: rotate(-120deg);
+            }
+        }
+        
+        @keyframes rotate3 {
+            0% {
+                transform: rotate(240deg);
+            }
+            100% {
+                transform: rotate(-240deg);
+            }
+        }
+        .center {
+            height:10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="one1"></div>
+    <div class="one2"></div>
+    <div class="one3"></div>
+    <div class="center"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

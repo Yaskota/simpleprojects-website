@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background change</title>
+    <style>
+        body {
+            height:800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sub {
+            background-color: black;
+            box-shadow: 1px 1px 10px 5px;
+
+        }
+        button {
+            height:200px;
+            width:200px;
+            font-size: 25px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 10px 5px;
+            margin: 10px;
+        }
+        .remove {
+            width:80px;
+        }
+    </style>
+</head>
+<body>
+    <button  class="change" onclick="
+        count++;
+        console.log(count);
+        if((count % 2) === 0) {
+            document.querySelector('body').classList.remove('sub');
+        }
+        else {
+            
+            document.querySelector('body').classList.add('sub');
+        }
+        ">
+        Change Background
+    </button>
+    <script>
+        let count=0;
+    </script>
+</body>
+</html>

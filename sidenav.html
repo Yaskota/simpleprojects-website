@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #00e06c;
+    }
+    .menu{
+        height: 70px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: aliceblue;
+        border-radius: 5px;
+    }
+    
+    .block{
+        height: 400px;
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        background-color: aliceblue;
+        border-radius: 5px;
+        top: 20px;
+    }
+    .man{
+        width: 40px;
+        height: 40px;
+        display: flex;
+       
+        background-color: aliceblue;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        border: none;
+        background-color: aliceblue;
+        border-radius: 5px;
+        height: 35px;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: #9eaad4;
+    }
+    .menubar{
+        height: 100%;
+        width: 100%;
+    }
+    .menubar:hover{
+        background-color: darkblue;
+    }
+    .onclick {
+        height: 400px;
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        background-color:aliceblue;
+        border-radius: 5px;
+        top: 213px;
+        left:733px;
+        z-index: -1;
+        display: none;
+    }
+    .onclicknew{
+        display: contents;
+        height: 400px;
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        background-color:aliceblue;
+        border-radius: 5px;
+        top: 213px;
+        left:733px;
+        z-index: -1;
+    }
+
+
+</style>
+<body>
+    <div class="menu">
+        <button class="menubar" onclick="
+            count++;
+            if(count % 2 != 0){
+                document.querySelector('.onclick').classList.add('onclicknew');
+            }
+            else {
+                document.querySelector('.onclick').classList.remove('onclicknew');
+            }
+            
+            "><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div class="block">
+        <div class="man"><button><i class="fa-brands fa-apple fa-2xl" style="color: #4cf0ee;"></i></button></div>
+        
+        <div class="man"><button><i class="fa-brands fa-google fa-2xl" style="color: #d92020;"></i></button></div>
+        <div class="man"><button><i class="fa-brands fa-youtube fa-flip-vertical fa-2xl" style="color: #e41111;"></i></button></div>
+        <div class="man"><button><i class="fa-brands fa-facebook fa-2xl" style="color: #eff221;"></i></button></div>
+        <div class="man"><button><i class="fa-brands fa-instagram fa-2xl" style="color: #ed5b0c;"></i></button></div>
+        <div class="man"><button><i class="fa-brands fa-linkedin fa-2xl" style="color: #133086;"></i></button></div>
+        <div class="man"><button><i class="fa-brands fa-github fa-2xl" style="color: #133086;"></i></button></div>
+        <div class="man"><button><i class="fa-brands fa-tiktok fa-2xl" style="color: #d92020;"></i></button></div>
+    </div>
+    <div class="onclick">
+        <div><button class="text">apple</button></div>
+        <div><button class="text">google</button></div>
+        <div><button class="text">youtube</button></div>
+        <div><button class="text">facebook</button></div>
+        <div><button class="text">instagram</button></div>
+        <div><button class="text">linkedin</button></div>
+        <div><button class="text">github</button></div>
+        <div><button class="text">tiktok</button></div>
+    </div>
+    <script>
+        let count = 0;
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("housedesign.jpg");
+        background-size: cover;
+       
+    }
+    .mars{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        border: 5px solid transparent;
+    }
+    .urenus{
+        font-size: 25px;
+        color: aliceblue;
+        margin-left: 40px;
+        margin-right: 700px;
+        margin-top: 10px;
+    }
+    .jupiter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 3px solid transparent;
+        
+        width: 900px;
+        margin-top: 10px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    .cam{
+        font-size: 80px;
+        height: 100px;
+        color: aliceblue;
+        font-family: 'Times New Roman', Times, serif;
+       display: flex;
+       justify-content: center;
+       border: 5px solid transparent;
+       position: relative;
+       top: 330px;
+    }
+    .arms{
+        font-size: 20px;
+        color: aliceblue;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+       border: 5px solid transparent;
+       top: 330px;
+    }
+    .mac{
+        font-size: 20px;
+        color: aliceblue;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid transparent;
+        position: relative;
+        top: 310px;
+    }
+    #cam{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        color: aliceblue;
+        align-items: center;
+        border: 3px solid transparent;
+        position: relative;
+        top: 330px;
+    }
+    #arms{
+        width: 200px;
+        height: 50px;
+        border: 1px solid rgb(32, 243, 145);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        position: relative;
+        margin-right: 20px;
+    }
+    #mac{
+        width: 200px;
+        height: 50px;
+        border: 1px solid rgb(32, 243, 145);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        position: relative;
+    }
+    .man {
+        position: relative;
+    }
+    .man::after{
+        content: '';
+        height: 2px;
+        background-color:  rgb(32, 243, 145);
+        width: 0px;
+        position: absolute;
+        top: 28px;
+        left: 0px;
+        z-index: 0;
+        transition: 0.5s;
+    }
+    .man:hover::after {
+        width: 100%;
+        
+    }
+    span{
+        background-color:  rgb(32, 243, 145);
+        height: 100%;
+        width: 0%;
+        border-radius: 30px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        transition-duration: 0.5s;
+    } 
+    #mac:hover span{
+        width:100%;
+    }
+    #arms:hover span{
+        width: 100%;
+    }
+    /* #mac::after{
+        content:'';
+        height: 50px;
+        background-color:  aqua;
+        border-radius: 30px;
+        width: 0px;
+        position: absolute;
+        top: 0px;
+        left:0px;
+
+    }
+    #mac:hover::after{
+        display: flex;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        content: 'SUBCSRIBE';
+        width: 202px;
+    } */
+    /* #arms::after{
+        content:'';
+        height: 50px;
+        background-color:  aqua;
+        border-radius: 30px;
+        width: 0px;
+        position: absolute;
+        top: 0px;
+        left:0px;
+        transition-duration: 1s;
+
+    }
+    #arms:hover::after{
+        display: flex;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        content: 'WATCH MORE';
+        width: 202px;
+    } */
+</style>
+<body>
+    <div class="mars">
+        <div class="urenus">
+            <b>!Nterior</b>
+        </div>
+        <div class="jupiter">
+            <div class="man"><a href="#"><b>HOME</b></a></div>
+            <div class="man"><a href="#"><b>BEDROOM</b></a></div>
+            <div class="man"><a href="#"><b>BEDROOM</b></a></div>
+            <div class="man"><a href="#"><b>DRIVING</b></a></div>
+            <div class="man"><a href="#"><b>KITCHEN</b></a></div>
+            <div class="man"><a href="#"><b>BACKYARD</b></a></div>
+        </div>
+    </div>
+    <div class="cam">
+        <b>DESIGN YOUR HOUSE</b>
+    </div>
+    <DIV class="arms">
+        subscribe Easy Tutorials YouTube Channel to watch more videos,
+        
+    </DIV>
+    <div class="mac">
+        press the ball icon to get latest updates.
+    </div>
+    <div ID="cam">
+        <div id="arms">
+            <b><a href="#"><span></span>WATCH MORE</a></b>
+        </div>
+        <DIV id="mac">
+            <B><a href="#" class="oooo"><span></span>SUBSCRIBE</a></B>
+        </DIV>
+    </div>
+</body>
+</html>
